@@ -21,6 +21,10 @@ class BlogPostsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+
+  end
+
   private
 
   def blog_post_params
