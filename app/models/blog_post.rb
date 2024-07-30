@@ -1,7 +1,9 @@
 class BlogPost < ApplicationRecord
+  has_rich_text :content
   validates :title, presence: true
   # validates :body, presence: true
-  validates_presence_of :body, on: :create, message: "can't be blank"
+  # validates_presence_of :body, on: :create, message: "can't be blank"
+  validates_presence_of :content, on: :create, message: "can't be blank"
 
   # scope :sorted, -> { order(published_at: :desc, updated_at: :desc)}
   scope :sorted, -> { order(arel_table[:published_at].desc,null_last).order(updated_at: :desc)}
