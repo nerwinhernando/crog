@@ -3,7 +3,8 @@ class BlogPost < ApplicationRecord
   # validates :body, presence: true
   validates_presence_of :body, on: :create, message: "can't be blank"
 
-  scope :sorted, -> { order(published_at: :desc, updated_at: :desc)}
+  # scope :sorted, -> { order(published_at: :desc, updated_at: :desc)}
+  scope :sorted, -> { order(arel_table[:published_at].desc,null_last).order(updated_at: :desc)}
   scope :draft, -> { where(published_at: nil) }
   scope :published, -> { where("published_at <= ?", Time.current) }
   scope :scheduled, -> { where("published_at >= ?", Time.current) }
