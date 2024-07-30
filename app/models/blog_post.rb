@@ -1,4 +1,5 @@
 class BlogPost < ApplicationRecord
+  has_rich_text :content
   validates :title, presence: true
   # validates :body, presence: true
   validates_presence_of :body, on: :create, message: "can't be blank"
