@@ -13,3 +13,9 @@ user.update!(
   password: "password",
   password_confirmation: "password"
 )
+
+# if Rails.env.development?
+#   100.times do |i|
+#     BlogPost.create title: "BlogPost #{i}", content: "Hello World", published_at: Time.current
+#   end
+# end
