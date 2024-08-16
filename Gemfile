@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.1.2"
-
+ruby "~> 3.2"
 
 gem 'aws-sdk-s3'
 
@@ -79,3 +78,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "tailwindcss-rails", "~> 2.6"
+
+gem "pagy", "~> 8.0"
