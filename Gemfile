@@ -79,4 +79,4 @@ gem "devise", "~> 4.9"
 
 gem "tailwindcss-rails", "~> 2.6"
 
-gem "pagy", "~> 9.0"
+gem "pagy", "~> 8.0"
